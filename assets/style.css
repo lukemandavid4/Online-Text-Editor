@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Consolas, monospace;
+  }
+  body {
+    background: #333333;
+  }
+  .container {
+    display: flex;
+  }
+  .input-box,
+  .output {
+    flex-basis: 50%;
+    width: 50%;
+  }
+  .input,
+  .output {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  .input label,
+  .output label {
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .input label i,
+  .output label i {
+    margin-right: 5px;
+  }
+  .input textarea {
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline: none;
+    background: #050c1c;
+    color: azure;
+    font-size: 16px;
+    resize: none;
+  }
+  .output iframe {
+    background: #fff;
+    width: 100%;
+    height: 90vh;
+  }
+  .input {
+    transform: translateX(-100px);
+    opacity: 0;
+    animation: lukeman 0.5s ease forwards;
+  }
+  @keyframes lukeman {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .output {
+    transform: translateY(-300px);
+    opacity: 0;
+    animation: luke 0.5s ease forwards;
+  }
+  @keyframes luke {
+    0% {
+      transform: translateY(-300px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .input-box,
+    .output {
+      flex-basis: 100%;
+      width: 100%;
+    }
+  }
